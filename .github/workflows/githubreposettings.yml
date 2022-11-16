@@ -13,7 +13,8 @@ jobs:
         - name: create a repo
           run: |
           
-            curl -X POST -H "Accept: application/vnd.github+json" 
+            curl -X POST \
+            -H "Accept: application/vnd.github+json" 
             -H "Authorization: Bearer ${GITHUB_TOKEN}" \
             https://api.github.com/orgs/prasanthksalla/repos 
             -d '{"name":"automatedrepo","description":"This is my first repository","homepage":"https://github.com","private":true,"has_issues":true,"has_projects":true,"has_wiki":true,"allow_squash_merge":true,"allow_rebase_merge":true,}'
