@@ -26,6 +26,20 @@ jobs:
            -f homepage='https://github.com/prasanthksalla/test' \
            -F private=true \
            -F has_wiki=true 
+         
+        - name: adding teams to organization
+          run: |
+           gh api \
+           --method PUT \
+           -H "Accept: application/vnd.github+json" \
+           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasha94/test \
+           -f permission='maintain'  
+
+           gh api \
+           --method PUT \
+           -H "Accept: application/vnd.github+json" \
+           /orgs/prasanthksalla/teams/whr_devopsautomation/repos/prasha94/test \
+           -f permission='admin'  
 
 
            
