@@ -40,8 +40,8 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasanthksalla/test \
-           -f permission='maintain'  
+           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasanthksalla/test
+             
 
            gh api \
            --method PUT \
