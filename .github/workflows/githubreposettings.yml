@@ -46,7 +46,7 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /teams/whr_data_devs/projects/test \         #/teams/TEAM_ID/projects/PROJECT_ID \
+           /teams/whr_data_devs/projects/test \         
            -f permission='write'
            
  
