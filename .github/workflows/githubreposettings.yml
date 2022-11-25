@@ -32,15 +32,16 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /teams/whr_data_devs/projects/test \         
-           -f permission='write'
+           /teams/whr_data_devs/projects/test        
+           
          
         - name: adding teams to organization project
           run: |
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasanthksalla/test
+           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasanthksalla/test \
+           -f permission='maintain'
              
 
            gh api \
