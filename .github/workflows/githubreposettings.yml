@@ -44,7 +44,7 @@ jobs:
            --method PUT \
            -H "Accept: application/vnd.github+json" \
            /orgs/prasanthksalla/teams/whr_data_devs/repos/prasanthksalla/test \
-           -f permission='write' 
+           -f permission='maintain' 
            
 
            
