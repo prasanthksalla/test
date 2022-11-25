@@ -10,8 +10,7 @@ jobs:
       GH_TOKEN: ${{ secrets.REPO_SECRET }}      
       #OWNER: ${{ github.repository_owner }}
       
-    steps:
-    
+    steps:    
         - name: Github Action for curl
           uses: wei/curl@v1.1.1
 
@@ -44,7 +43,7 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_devss/repos/prasanthksalla/test \
+           /orgs/prasanthksalla/teams/whr_devs/repos/prasanthksalla/test \
            -f permission='write' 
            
 
