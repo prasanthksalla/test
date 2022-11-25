@@ -39,12 +39,20 @@ jobs:
            --method PUT \
            -H "Accept: application/vnd.github+json" \
            /orgs/prasanthksalla/teams/whr_devopsautomation/repos/prasanthksalla/test \
-           -f permission='admin'  
+           -f permission='admin' 
+           
+        - name: Adds an organization project to a team  
+          run: |       
+           gh api \
+           --method PUT \
+           -H "Accept: application/vnd.github+json" \
+           /teams/whr_data_devs1/projects/test \         #/teams/TEAM_ID/projects/PROJECT_ID \
+           -f permission='write'
            
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_devs/repos/prasanthksalla/test \
+           /orgs/prasanthksalla/teams/whr_data_devs1/repos/prasanthksalla/test \
            -f permission='write'  
 
 
