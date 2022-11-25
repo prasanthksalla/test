@@ -40,17 +40,13 @@ jobs:
            /orgs/prasanthksalla/teams/whr_devopsautomation/repos/prasanthksalla/test \
            -f permission='admin' 
            
-           #gh api \
-           #--method PUT \
-           #-H "Accept: application/vnd.github+json" \
-           #/orgs/prasanthksalla/teams/whr_devs/repos/prasanthksalla/test \
-           #-f permission='write' 
-           
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_devs/projects/test \
-           -f permission='write' 
+           /orgs/prasanthksalla/teams/whr_data_devs/repos/prasanthksalla/test \
+           -f permission='admin' 
+           
+
            
 
            
