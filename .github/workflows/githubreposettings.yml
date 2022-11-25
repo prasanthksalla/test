@@ -1,6 +1,7 @@
 name: Create and update github repo
 on:
   workflow_dispatch:
+  push:
 
 jobs:
  gitreposettings:
