@@ -26,7 +26,7 @@ jobs:
            -F private=true \
            #-F has_issues=true \
            #-F has_projects=true \
-           #-F has_wiki=true 
+           -F has_wiki=true 
            #-F allow_auto_merge=true
            #-F allow_rebase_merge=true
 
