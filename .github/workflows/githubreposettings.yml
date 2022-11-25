@@ -32,13 +32,13 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasha94/test \
+           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasanthksalla/test \
            -f permission='maintain'  
 
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_devopsautomation/repos/prasha94/test \
+           /orgs/prasanthksalla/teams/whr_devopsautomation/repos/prasanthksalla/test \
            -f permission='admin'  
 
 
