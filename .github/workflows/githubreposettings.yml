@@ -55,3 +55,10 @@ jobs:
             https://api.github.com/repos/prasanthksalla/test/branches/main/protection \
             -d '{"required_status_checks":{"strict":true,"contexts":["Reports"]},"enforce_admins":null,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
+            curl \
+            -X PUT \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.REPO_SECRET }}" \
+            https://api.github.com/repos/prasanthksalla/test/branches/dev/protection \
+            -d '{"required_status_checks":{"strict":true,"contexts":["Reports"]},"enforce_admins":null,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
+
