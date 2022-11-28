@@ -7,8 +7,9 @@ jobs:
  gitreposettings:
     runs-on: ubuntu-latest        
     env:
-      GH_TOKEN: ${{ secrets.REPO_SECRET }}      
-      #OWNER: ${{ github.repository_owner }}
+      GH_TOKEN: ${{ secrets.REPO_SECRET }}    
+      OWNER: ${{ github.repository_owner }}
+      REPO: ${{ github.event.repository.name }}
       
     steps:    
         - name: Github Action for curl
@@ -22,7 +23,7 @@ jobs:
            /repos/prasha94/test \
            -f name='test' \
            -f description='changes are made to this repo settings' \
-           -f homepage='https://github.com/prasanthksalla/test' \
+           -f homepage='https://github.com/prasanthksalla/REPO' \
            -F private=true \
            -F has_wiki=true 
         
