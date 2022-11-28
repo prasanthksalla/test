@@ -10,7 +10,7 @@ jobs:
       GH_TOKEN: ${{ secrets.REPO_SECRET }}    
       OWNER: ${{ github.repository_owner }}
       REPO: ${{ github.event.repository.name }}
-      ORGANIZATION: ${{ github.event.org.name }}
+      ORGANIZATION: ${{ github.event.org }}
       
     steps:    
         - name: Github Action for curl
