@@ -24,7 +24,7 @@ jobs:
            -f name='test' \
            -f description='changes are made to this repo settings' \
            -f homepage='https://github.com/prasanthksalla/"$REPO"' \
-           #-F private=true \
+           -F private=false \
            -F has_wiki=true 
         
         - name: adding teams to organization project
