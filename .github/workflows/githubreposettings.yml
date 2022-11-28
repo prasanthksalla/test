@@ -10,6 +10,7 @@ jobs:
       GH_TOKEN: ${{ secrets.REPO_SECRET }}    
       OWNER: ${{ github.repository_owner }}
       REPO: ${{ github.event.repository.name }}
+      ORGANIZATION: ${{ github.event.org.id }}
       
     steps:    
         - name: Github Action for curl
@@ -32,7 +33,7 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_leads/repos/"$OWNER"/"$REPO" \
+           /orgs/"$ORGANIZATION"/teams/whr_data_leads/repos/"$OWNER"/"$REPO" \
            -f permission='maintain'             
 
            gh api \
