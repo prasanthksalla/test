@@ -69,4 +69,4 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.REPO_SECRET }}" \
             https://api.github.com/repos/prasanthksalla/test/hooks \
-            -d '{"name":"git-webhook","active":true,"events":["push"],"config":{"url":"https://example.com/git-webhook","content_type":"form","insecure_ssl":"0"}}'
+            -d '{"name":"web","active":true,"events":["push"],"config":{"url":"https://example.com/git-webhook","content_type":"form","insecure_ssl":"0"}}'
