@@ -15,18 +15,6 @@ jobs:
     steps:    
         - name: Github Action for curl
           uses: wei/curl@v1.1.1
-
-        - name: update github repo
-          run: |
-           gh api \
-           --method PATCH \
-           -H "Accept: application/vnd.github+json" \
-           /repos/"$OWNER"/"$REPO" \
-           -f name='test' \
-           -f description='changes are made to this repo settings' \
-           -f homepage='https://github.com/"$OWNER"/"$REPO"' \
-           -F private=false \
-           -F has_wiki=true 
         
         - name: adding teams to organization project
           run: |
