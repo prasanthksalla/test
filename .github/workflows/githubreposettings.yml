@@ -62,3 +62,11 @@ jobs:
             https://api.github.com/repos/prasanthksalla/test/branches/dev/protection \
             -d '{"required_status_checks":{"strict":true,"contexts":["Reports"]},"enforce_admins":null,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
+        - name: adding webhook
+          run: |
+            curl \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.REPO_SECRET }}" \
+            https://api.github.com/repos/prasanthksalla/test/hooks \
+            -d '{"name":"git-webhook","active":true,"events":["push"],"config":{"url":"https://example.com/git-webhook","content_type":"form","insecure_ssl":"0"}}'
