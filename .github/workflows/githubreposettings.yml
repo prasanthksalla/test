@@ -32,19 +32,19 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasanthksalla/test \
+           /orgs/prasanthksalla/teams/whr_data_leads/repos/prasanthksalla/REPO \
            -f permission='maintain'             
 
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_devopsautomation/repos/prasanthksalla/test \
+           /orgs/prasanthksalla/teams/whr_devopsautomation/repos/prasanthksalla/REPO \
            -f permission='admin' 
            
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_devs/repos/prasanthksalla/test \
+           /orgs/prasanthksalla/teams/whr_data_devs/repos/prasanthksalla/REPO \
            -f permission='maintain' 
            
         - name: adding branch protection rules
@@ -53,14 +53,14 @@ jobs:
             -X PUT \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.REPO_SECRET }}" \
-            https://api.github.com/repos/prasanthksalla/test/branches/main/protection \
+            https://api.github.com/repos/prasanthksalla/REPO/branches/main/protection \
             -d '{"required_status_checks":{"strict":true,"contexts":["Reports"]},"enforce_admins":null,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
             curl \
             -X PUT \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.REPO_SECRET }}" \
-            https://api.github.com/repos/prasanthksalla/test/branches/dev/protection \
+            https://api.github.com/repos/prasanthksalla/REPO/branches/dev/protection \
             -d '{"required_status_checks":{"strict":true,"contexts":["Reports"]},"enforce_admins":null,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
         - name: adding webhook
@@ -69,5 +69,5 @@ jobs:
             -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.REPO_SECRET }}" \
-            https://api.github.com/repos/prasanthksalla/test/hooks \
+            https://api.github.com/repos/prasanthksalla/REPO/hooks \
             -d '{"name":"web","active":true,"events":["push"],"config":{"url":"https://example.com/git-webhook","content_type":"form","insecure_ssl":"0"}}'
