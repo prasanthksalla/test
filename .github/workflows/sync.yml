@@ -22,3 +22,4 @@ jobs:
             prasanthksalla/sample@master
           FILES: |
             .github/workflows/githubreposettings.yml=.github/workflows/githubreposettings.yml
+          TOKEN: ${{ secrets.REPO_SECRET }}
