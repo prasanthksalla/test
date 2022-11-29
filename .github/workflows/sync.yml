@@ -19,6 +19,6 @@ jobs:
         uses: kbrashears5/github-action-file-sync@v2.0.0
         with:
           REPOSITORIES: |
-            "$ORG"/sample@master
+            prasanthksalla/sample@master
           FILES: |
             .github/workflows/githubreposettings.yml=.github/workflows/githubreposettings.yml
