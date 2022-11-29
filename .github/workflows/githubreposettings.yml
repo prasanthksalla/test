@@ -9,8 +9,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.REPO_SECRET }}    
       OWNER: ${{ github.repository_owner }}
-      REPO: ${{ github.event.repository.name }}
-      #ORG: ${{ github.event.org.login }}
+      REPO: ${{ github.event.repository.name }}      
       ORG: ${{ github.event.repository.owner.name }}
       
       
@@ -29,13 +28,13 @@ jobs:
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_devopsautomation/repos/"$OWNER"/"$REPO" \
+           /orgs/"$ORG"/teams/whr_devopsautomation/repos/"$OWNER"/"$REPO" \
            -f permission='admin' 
            
            gh api \
            --method PUT \
            -H "Accept: application/vnd.github+json" \
-           /orgs/prasanthksalla/teams/whr_data_devs/repos/"$OWNER"/"$REPO" \
+           /orgs/"$ORG"/teams/whr_data_devs/repos/"$OWNER"/"$REPO" \
            -f permission='maintain' 
            
         - name: adding branch protection rules
