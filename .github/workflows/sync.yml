@@ -2,10 +2,6 @@ name: Action File Sync
 on:
   push:
   workflow_dispatch:
-    branches:
-      - master
-      - dev
-      - release  
 
 jobs:
   Action_file_sync:
@@ -23,6 +19,6 @@ jobs:
         uses: kbrashears5/github-action-file-sync@v2.0.0
         with:
           REPOSITORIES: |
-            "$OWNER"/sample@master
+            "$ORG"/sample@master
           FILES: |
             .github/workflows/githubreposettings.yml=.github/workflows/githubreposettings.yml
