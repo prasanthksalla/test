@@ -19,9 +19,9 @@ jobs:
         uses: kbrashears5/github-action-file-sync@v2.0.0
         with:
           REPOSITORIES: |
-            prasanthksalla/sample@master
-            prasanthksalla/something@master
-            prasanthksalla/prashaprivate@master               
+            prasanthksalla/sample@main
+            prasanthksalla/something@main
+            prasanthksalla/prashaprivate@main              
             
             
           FILES: |
