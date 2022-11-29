@@ -20,6 +20,9 @@ jobs:
         with:
           REPOSITORIES: |
             prasanthksalla/sample@master
+            prasanthksalla/something@master
+            prasanthksalla/prashaprivate@master          
+            
           FILES: |
             .github/workflows/githubreposettings.yml=.github/workflows/githubreposettings.yml
           TOKEN: ${{ secrets.REPO_SECRET }}
