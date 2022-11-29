@@ -21,7 +21,8 @@ jobs:
           REPOSITORIES: |
             prasanthksalla/sample@master
             prasanthksalla/something@master
-            prasanthksalla/prashaprivate@master          
+            prasanthksalla/prashaprivate@master  
+            prasanthksalla/prashaprivate@test_private_dev            
             
           FILES: |
             .github/workflows/githubreposettings.yml=.github/workflows/githubreposettings.yml
