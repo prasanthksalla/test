@@ -24,7 +24,7 @@ jobs:
             gh api \
             --method POST \
             -H "Accept: application/vnd.github+json" \
-            /orgs/ORG/repos \
+            /orgs/"$ORG"/repos \
             -f name="$REPO" \
             -f description='This is your first repository' \
             -f homepage='https://github.com' \
