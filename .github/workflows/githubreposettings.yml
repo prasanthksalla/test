@@ -16,6 +16,20 @@ jobs:
     steps:    
         - name: Github Action for curl
           uses: wei/curl@v1.1.1
+          
+        - name: create organization repo
+          run: |
+            gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /orgs/"$ORG"/repos \
+            -f name='automated_repo' \
+            -f description='This is automated repo' \
+            -f homepage='https://github.com' \
+            -F private=true \
+            -F has_issues=true \
+            -F has_projects=false \
+            -F has_wiki=true 
         
         - name: adding teams to organization project
           run: |
