@@ -37,9 +37,12 @@ jobs:
           run: |
             echo "# created $repo and ready to use" >> README.md
             git init
-            git add README.md
-            git commit -m "commit readme"
+            git config --global user.email "you@example.com"
+            git config --global user.name "$OWNER"
             git branch -M main
+            git config --global init.defaultBranch main
+            git add README.md
+            git commit -m "commit readme"            
             git remote add origin https://github.com/"$ORG"/"$REPO".git
             git push -u origin main
         
