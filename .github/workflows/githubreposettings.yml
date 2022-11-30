@@ -29,22 +29,10 @@ jobs:
             -f description='This is automated repo' \
             -f homepage='https://github.com' \
             -F private=false \
-            -F has_issues=true \
-            -F has_projects=false \
+            -F has_issues=true \            
             -F has_wiki=true 
             
-        - name: Commit readme to GitHubRepo
-          run: |
-            echo "# created $repo and ready to use" >> README.md
-            git init
-            git config --global user.email "you@example.com"
-            git config --global user.name "$GITHUB_ACTOR"
-            git branch -M main
-            git config --global init.defaultBranch main
-            git add README.md
-            git commit -m "commit readme"            
-            git remote add origin "https://github.com/"$ORG"/"$REPO".git"
-            git push -u origin main
+
         
         - name: adding teams to organization project
           run: |
