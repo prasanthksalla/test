@@ -15,7 +15,7 @@ jobs:
       ORG: prasanthksalla      
       
     steps:     
-        - uses: action/checkout@v3
+        
         - name: Github Action for curl
           uses: wei/curl@v1.1.1
           
