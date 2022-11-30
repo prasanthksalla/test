@@ -32,7 +32,12 @@ jobs:
             -F has_issues=true \
             -F has_projects=false \
             -F has_wiki=true 
-            
+
+        - name: create repo branch
+          run: |
+            gh api \
+            -H "Accept: application/vnd.github+json" \
+            /repos/"$OWNER"/"$REPO"/branches/main           
 
         
         - name: adding teams to organization project
