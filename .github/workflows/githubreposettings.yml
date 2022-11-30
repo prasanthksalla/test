@@ -31,15 +31,7 @@ jobs:
             -F private=false \
             -F has_issues=true \
             -F has_projects=false \
-            -F has_wiki=true 
-
-        - name: create branch
-          uses: peterjgrainger/action-create-branch@v2.2.0
-          env:
-            GH_TOKEN: ${{ secrets.REPO_SECRET }}
-          with:
-            branch: 'main'
-            sha: '${{ github.event.pull_request.head.sha }}'           
+            -F has_wiki=true      
 
         
         - name: adding teams to organization project
