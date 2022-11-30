@@ -14,7 +14,8 @@ jobs:
       REPO: automated_repo
       ORG: prasanthksalla      
       
-    steps:    
+    steps:     
+        - uses: action/checkout@v3
         - name: Github Action for curl
           uses: wei/curl@v1.1.1
           
@@ -31,6 +32,16 @@ jobs:
             -F has_issues=true \
             -F has_projects=false \
             -F has_wiki=true 
+            
+        - name: Commit readme to GitHubRepo
+          run: |
+            echo "# created $repo and ready to use" >> README.md
+            git init
+            git add README.md
+            git commit -m "commit readme"
+            git branch -M main
+            git remote add origin https://github.com/"$ORG"/"$REPO".git
+            git push -u origin main
         
         - name: adding teams to organization project
           run: |
