@@ -30,7 +30,7 @@ jobs:
             -f homepage='https://github.com' \
             -F private=false \
             -F has_issues=true \
-            -F has_projects=true \
+            -F has_projects=false \
             -F has_wiki=true 
             
 
